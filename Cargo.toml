@@ -10,5 +10,6 @@ rustflags = ["-C", "link-arg=-fuse-ld=/opt/homebrew/opt/llvm/bin/ld64.lld"]
 
 
 [dependencies]
+actix-web = "4.11.0"
 
 
