@@ -1,4 +1,9 @@
 
-fn main() {
-    println!("Hello, world!");
+use rs_project::run;
+use std::net::TcpListener;
+
+#[tokio::main]
+async fn main() -> Result<(), std::io::Error>{
+    let listener = TcpListener::bind("127.0.0.1:0").expect("Failed to bind random port");
+    run(listener).await.expect("Failed to listen port").await
 }
