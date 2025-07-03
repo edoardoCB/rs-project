@@ -4,6 +4,12 @@ version = "0.1.0"
 edition = "2021"
 authors = ["Edoardo Coronado <eecb76@hotmail.com>"]
 
+[lib]
+path = "src/lib.rs"
+
+[[bin]]
+path = "src/main.rs"
+name = "rs-project"
 
 [target.aarch64-apple-darwin]
 rustflags = ["-C", "link-arg=-fuse-ld=/opt/homebrew/opt/llvm/bin/ld64.lld"]
